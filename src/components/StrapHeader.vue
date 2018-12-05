@@ -49,8 +49,13 @@
       margin-right: 20px;
   }
 
-  h1, li {
+  h1 {
       display: inline;
       margin: 10px;
+  }
+
+  li {
+      display: inline;
+      margin: 4px;
   }
 </style>
