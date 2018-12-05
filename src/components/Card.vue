@@ -66,6 +66,7 @@
     transform: translate(0, 100%);
     opacity: 0;
     transition: transform linear 0.7s, opacity 0.9s;
+    cursor: pointer;
   }
 
   .photo-background {
@@ -94,18 +95,23 @@
     transform: scale(0.95);
   }
 
-  .card-content:hover h1 span.highlight {
+  .card-content:hover h1 span.highlight, .card-content:active h1 span.highlight {
       background: rgb(127,255,212);
   }
 
-  .desc {
-    font-size: 16px;
-    transform: translate(0, 320px);
-    transition: transform ease-in-out 0.5s;
-  }
 
-  .card-content:hover .desc{
+
+
+  @media screen and (min-width: 999px) {
+    .desc {
+      transform: translate(0, 320px);
+      transition: transform ease-in-out 0.5s;
+    }
+    
+    .card-content:hover .desc {
       transform: translate(0,0);
+    }
   }
+  
 
 </style>

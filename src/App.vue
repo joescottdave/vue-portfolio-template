@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      projects: ['Project01', 'Project02', 'Project03', 'Project04', 'Project05', 'Project06', 'Project07', 'Project08'],
+      projects: ['Project01', 'Project02', 'Project03', 'Project04', 'Project05'],
       specialProject: {name: 'Hello World', desc: 'Greetings to the whole world and everyone in it!', icon: '🌍'}
     }
   }
@@ -40,7 +40,7 @@ export default {
 .grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(auto, 1fr);
+  grid-auto-rows: 1fr;
   grid-gap: 10px;
   margin: 0 auto;
   max-width: 1000px;
