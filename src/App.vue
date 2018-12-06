@@ -1,9 +1,16 @@
 <template>
   <div id="app">
     <StrapHeader/>
+    <div class="about">
+      <h2>Hi 👋</h2>
+      <p>Call me Ishmael...</p>
+    </div>
+    <div>
+      <h2>Projects</h2>
     <div class="grid">
     <Card v-bind="specialProject"/>
     <Card v-for="n in projects" v-bind:key="n" :name="n"/>
+    </div>
     </div>
   </div>
 </template>
