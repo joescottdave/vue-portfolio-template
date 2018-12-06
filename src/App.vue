@@ -1,29 +1,34 @@
 <template>
   <div id="app">
-    <StrapHeader/>
-    <div class="about">
-      <h2>Hi 👋</h2>
-      <p>Call me Ishmael...</p>
-    </div>
+    <StrapHeader />
+    <main>
+      <section>
+        <About />
+      </section>
+      <section>
     <div>
       <h2>Projects</h2>
     <div class="grid">
-    <Card v-bind="specialProject"/>
-    <Card v-for="n in projects" v-bind:key="n" :name="n"/>
+    <Card v-bind="specialProject" />
+    <Card v-for="n in projects" v-bind:key="n" :name="n" />
     </div>
     </div>
+      </section>
+    </main>
   </div>
 </template>
 
 <script>
 import Card from './components/Card.vue'
 import StrapHeader from './components/StrapHeader.vue'
+import About from './components/About.vue'
 
 export default {
   name: 'app',
   components: {
     Card,
-    StrapHeader
+    StrapHeader,
+    About
   },
   data() {
     return {
@@ -44,6 +49,11 @@ export default {
   margin-top: 80px;
 }
 
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -51,6 +61,21 @@ export default {
   grid-gap: 10px;
   margin: 0 auto;
   max-width: 1000px;
+}
+
+h2 {
+  text-align:left;
+  padding: 0 10px;
+  }
+
+@media screen and (min-width: 999px) {
+  section {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 999px) {

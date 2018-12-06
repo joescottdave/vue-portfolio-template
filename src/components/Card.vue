@@ -1,13 +1,13 @@
 <template>
   <div class="card">    
   <div class="card-content">
-      <h1>
+      <h3>
           {{icon}}
           <span class="highlight">
               <br/>
               {{name}}
           </span>
-      </h1>
+      </h3>
       <p class="desc">
           {{desc}}
       </p>
@@ -80,22 +80,22 @@
       transform: translate(0,0);
   }
 
-  .card-content h1 {
+  .card-content h3 {
       font-size: 24px;
       color: #252525;
       margin-top: 45%;
   }
 
-  .card-content h1 span.highlight {
+  .card-content h3 span.highlight {
     background: linear-gradient(to top,rgba(127,255,212,.4) 35%,transparent 35%);
     transition: background-color linear 0.5s;
   }
 
   .card-content:active {
-    transform: scale(0.95);
+    transform: scale(0.85);
   }
 
-  .card-content:hover h1 span.highlight, .card-content:active h1 span.highlight {
+  .card-content:hover h3 span.highlight, .card-content:active h3 span.highlight {
       background: rgb(127,255,212);
   }
 
